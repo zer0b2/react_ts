@@ -11,7 +11,7 @@ export function buildWebpackConfig(options: BuildOptions): webpack.Configuration
     const {paths, mode, isDev} = options
     return {
         mode: mode,
-        resolve: buildResolvers(),
+        resolve: buildResolvers(options),
         entry: paths.entry,
         output: {
             filename: "[name].[contenthash].js",
